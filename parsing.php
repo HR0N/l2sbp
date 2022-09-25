@@ -130,7 +130,7 @@ function get_data_x5(){
         fetch_key_bosses($doc_key_bosses),
         fetch_sieges($doc_siege)];
 
-    return json_encode($data);
+    return $data;
 }
 
 
@@ -151,7 +151,7 @@ function complex_x5(){
     $count = 0;
     while ($count < 3){
         sleep(15);
-        $data = get_data_x5();
+        $data = json_encode(get_data_x5());
 
         echo '<pre>';
         echo var_dump($data);
